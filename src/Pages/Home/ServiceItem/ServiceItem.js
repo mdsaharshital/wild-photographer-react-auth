@@ -1,8 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const ServiceItem = ({ service }) => {
-  const { name, img, price, description } = service;
+  const { name, img, price, id, description } = service;
+  const navigate = useNavigate();
+  const navigateToServiceDetails = () => {
+    navigate(`/productdetails/${id}`);
+  };
   return (
     <>
       <div className="col-md-3 mx-auto">
@@ -14,9 +18,12 @@ const ServiceItem = ({ service }) => {
             <p>
               <small>{description}</small>
             </p>
-            <Link to="/">
-              <button className="btn btn-outline-secondary">Buy Now</button>
-            </Link>
+            <button
+              onClick={() => navigateToServiceDetails()}
+              className="btn btn-outline-secondary"
+            >
+              Buy Now
+            </button>
           </div>
         </div>
       </div>

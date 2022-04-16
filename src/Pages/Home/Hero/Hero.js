@@ -1,12 +1,9 @@
 import React from "react";
 import "./Hero.css";
 
-import Header from "../../shared/Header/Header";
-
 const Hero = () => {
   return (
     <div>
-      <Header />
       <div className="heroSection">
         <div className="d-flex flex-column justify-content-center align-items-center h-100">
           <div className="">
