@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div>
       <div className="heroSection">
-        <div className="d-flex flex-column justify-content-center align-items-center h-100">
+        <div className="d-flex flex-column justify-content-center align-items-center">
           <div className="">
             <h1 className="text-white main-title">Wild Photography</h1>
             <p></p>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ServiceItem = ({ service }) => {
   const { name, img, price, id, description } = service;
@@ -9,8 +9,8 @@ const ServiceItem = ({ service }) => {
   };
   return (
     <>
-      <div className="col-md-3 mx-auto">
-        <div className="card">
+      <div className="col-sm-12 col-md-6 col-lg-4">
+        <div className="card mx-auto" style={{ width: "320px" }}>
           <img src={img} className="card-img-top" alt="..." />
           <div className="card-footer text-center">
             <h6>{name}</h6>

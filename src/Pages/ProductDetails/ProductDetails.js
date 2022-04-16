@@ -6,10 +6,12 @@ const ProductDetails = () => {
   const { productid } = useParams();
   return (
     <div className="product-details-container">
-      <div className="d-flex flex-column justify-content-center">
-        <h1>hello products details{productid}</h1>
+      <div className="h-100 d-flex flex-column justify-content-center align-items-center">
+        <h1>This is products details{productid}</h1>
         <Link to="/checkout">
-          <button>Proceed to checkout</button>
+          <button className="btn btn-outline-secondary my-3">
+            Proceed to checkout
+          </button>
         </Link>
       </div>
     </div>

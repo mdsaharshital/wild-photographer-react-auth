@@ -4,7 +4,7 @@ import LatestWork from "../LatestWork/LatestWork";
 
 const Home = () => {
   return (
-    <div className="w-100">
+    <div className="">
       <Hero />
       <LatestWork />
     </div>
