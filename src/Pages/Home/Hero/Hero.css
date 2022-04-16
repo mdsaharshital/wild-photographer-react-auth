@@ -1,0 +1,13 @@
+.main-title{
+    font-family: 'Beau Rivage', cursive;
+    font-size: 70px;
+}
+.heroSection{
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../../images/elephant-main.jpg) ;
+    height: 130vh; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
