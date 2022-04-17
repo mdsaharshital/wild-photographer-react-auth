@@ -5,7 +5,7 @@ import { BsFacebook, BsInstagram, BsLinkedin } from "react-icons/bs";
 const Footer = () => {
   return (
     <footer className="d-flex flex-column justify-content-center align-items-center">
-      <h3 className="footer-title ">Md Shahar Shitol</h3>
+      <h3 className="footer-title ">Sheikh Mujib</h3>
       <p className="mb-5">
         <small className="pro ">Production</small>
       </p>

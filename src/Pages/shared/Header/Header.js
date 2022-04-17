@@ -1,4 +1,3 @@
-import { Button } from "bootstrap";
 import { signOut } from "firebase/auth";
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
@@ -8,7 +7,7 @@ import auth from "../../../firebase.init";
 import "./Header.css";
 
 const Header = () => {
-  const [user, loading, error] = useAuthState(auth);
+  const [user] = useAuthState(auth);
   const logout = () => {
     signOut(auth);
   };
@@ -28,8 +27,8 @@ const Header = () => {
             </Nav>
           </Navbar.Collapse>
           {/* Middle section */}
-          <Navbar.Brand as={Link} to="/" className="">
-            Md Shahar Shital
+          <Navbar.Brand as={Link} to="/" className="header-title">
+            Sheikh Mujib
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           {/* right side menu bar */}
