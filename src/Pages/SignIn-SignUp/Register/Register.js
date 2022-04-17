@@ -5,12 +5,12 @@ import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import Loading from "../../shared/Loading/Loading";
 import { useUpdateProfile } from "react-firebase-hooks/auth";
-import { updateProfile } from "firebase/auth";
 
 const Register = () => {
   const navigate = useNavigate();
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
+  const [updateProfile, updating, UpdateProfileError] = useUpdateProfile(auth);
 
   const handleRegisterSubmit = async (e) => {
     e.preventDefault();
@@ -20,10 +20,11 @@ const Register = () => {
 
     await createUserWithEmailAndPassword(email, password);
     await updateProfile({ displayName: name });
+    navigate("/");
   };
 
   if (user) {
-    navigate("/");
+    console.log(user);
   }
 
   if (loading) {
