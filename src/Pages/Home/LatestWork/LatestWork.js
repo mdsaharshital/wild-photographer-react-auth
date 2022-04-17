@@ -19,14 +19,16 @@ const LatestWork = () => {
       name: "Fearless Zebra",
       img: zebra,
       price: 800,
-      description: "This is a awesome lion NFT made only for you",
+      description:
+        "This is a awesome zebra NFT will increase your collection value",
     },
     {
       id: 3,
       name: "Super Tiger",
       img: tiger,
       price: 1000,
-      description: "This is a awesome lion NFT made only for you",
+      description:
+        "This is a awesome tiger NFT is made only for tigers like you",
     },
   ];
   return (

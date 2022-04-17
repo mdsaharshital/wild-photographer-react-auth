@@ -1,27 +1,33 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Login.css";
 import auth from "./../../../firebase.init";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
-  const navigate = useNavigate();
+
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     signInWithEmailAndPassword(email, password);
   };
+
+  let from = location.state?.from?.pathname || "/";
+
   if (user) {
-    navigate("/");
+    navigate(from, { replace: true });
   }
+
   return (
     <div className="my-5">
       <h1 className="text-center">Login now</h1>
-      <div className="w-50 mx-auto">
+      <div className="col-10 col-md-8 col-lg-6 mx-auto">
         <Form onSubmit={handleLogin}>
           <Form.Group className="my-5" controlId="formBasicEmail">
             <Form.Control

@@ -13,8 +13,8 @@ const Register = () => {
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
+
     createUserWithEmailAndPassword(email, password);
-    console.log(name, email, password);
   };
   if (user) {
     navigate("/");
@@ -23,7 +23,7 @@ const Register = () => {
     <div>
       <div className="my-5">
         <h1 className="text-center">Register now</h1>
-        <div className="p-4 mx-auto  col col-md-6">
+        <div className="col-10 col-md-8 col-lg-6 mx-auto">
           <Form onSubmit={handleRegisterSubmit}>
             <Form.Group className="my-5" controlId="formBasicName">
               <Form.Control
