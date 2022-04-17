@@ -13,6 +13,8 @@ const Login = () => {
             <Form.Control
               className="border-top-0 border-end-0"
               type="email"
+              name="email"
+              required
               placeholder="Enter email"
             />
           </Form.Group>
@@ -21,6 +23,8 @@ const Login = () => {
             <Form.Control
               className="passowrd-form border-top-0 border-end-0"
               type="password"
+              name="password"
+              required
               placeholder="Password"
             />
           </Form.Group>

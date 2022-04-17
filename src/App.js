@@ -4,8 +4,8 @@ import AboutMe from "./Pages/About me/AboutMe";
 import Blogs from "./Pages/Blogs/Blogs";
 import Checkout from "./Pages/Checkout/Checkout";
 import Home from "./Pages/Home/Home/Home";
-import Login from "./Pages/Login/Login";
-import Register from "./Pages/Register/Register";
+import Login from "./Pages/SignIn-SignUp/Login/Login";
+import Register from "./Pages/SignIn-SignUp/Register/Register";
 import Footer from "./Pages/shared/Footer/Footer";
 import Header from "./Pages/shared/Header/Header";
 
