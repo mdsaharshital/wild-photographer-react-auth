@@ -61,9 +61,7 @@ const Register = () => {
                 placeholder="Password"
               />
             </Form.Group>
-            <Form.Group className="mb-4" controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="Agree To terms & condition" />
-            </Form.Group>
+
             {error && (
               <p>
                 <small className="text-danger">{error?.message}</small>

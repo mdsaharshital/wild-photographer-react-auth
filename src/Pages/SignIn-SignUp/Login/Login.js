@@ -71,9 +71,7 @@ const Login = () => {
               placeholder="Password"
             />
           </Form.Group>
-          <Form.Group className="" controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Agree To terms & condition" />
-          </Form.Group>
+
           {/* error */}
           {error && <p className="text-danger">{error?.message}</p>}
           <Button

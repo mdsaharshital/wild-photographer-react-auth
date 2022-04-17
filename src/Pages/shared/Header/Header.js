@@ -2,8 +2,8 @@ import { signOut } from "firebase/auth";
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Link } from "react-router-dom";
 import auth from "../../../firebase.init";
+import CustomLink from "../CustomLink/CustomLink";
 import "./Header.css";
 
 const Header = () => {
@@ -18,23 +18,23 @@ const Header = () => {
           {/* left side menu bar */}
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link as={Link} to="/" className="">
+              <Nav.Link as={CustomLink} to="/" className="">
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="/aboutme" className="">
+              <Nav.Link as={CustomLink} to="/aboutme" className="">
                 About me
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
           {/* Middle section */}
-          <Navbar.Brand as={Link} to="/" className="header-title">
+          <Navbar.Brand as={CustomLink} to="/" className="header-title">
             Sheikh Mujib
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           {/* right side menu bar */}
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link as={Link} to="/blogs" className="">
+              <Nav.Link as={CustomLink} to="/blogs" className="">
                 Blogs
               </Nav.Link>
               {user?.uid ? (
@@ -42,7 +42,7 @@ const Header = () => {
                   Log Out
                 </button>
               ) : (
-                <Nav.Link as={Link} to="/login" className="">
+                <Nav.Link as={CustomLink} to="/login" className="">
                   Log in
                 </Nav.Link>
               )}
