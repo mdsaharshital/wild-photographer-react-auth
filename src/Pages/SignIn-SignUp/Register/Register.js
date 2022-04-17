@@ -9,7 +9,7 @@ import { useUpdateProfile } from "react-firebase-hooks/auth";
 const Register = () => {
   const navigate = useNavigate();
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const [updateProfile, updating, UpdateProfileError] = useUpdateProfile(auth);
 
   const handleRegisterSubmit = async (e) => {
@@ -23,11 +23,7 @@ const Register = () => {
     navigate("/");
   };
 
-  if (user) {
-    console.log(user);
-  }
-
-  if (loading) {
+  if (loading || updating) {
     return <Loading />;
   }
   return (

@@ -1,6 +1,7 @@
 .main-title{
     font-family: 'Beau Rivage', cursive;
     font-size: 70px;
+    letter-spacing: 5px;
 }
 .heroSection{
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../../images/giraffe-2191662_1920.jpg) ;

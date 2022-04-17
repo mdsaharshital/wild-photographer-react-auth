@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Login.css";
 import auth from "./../../../firebase.init";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import Loading from "../../shared/Loading/Loading";
+import { useSendPasswordResetEmail } from "react-firebase-hooks/auth";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
   const [signInWithEmailAndPassword, user, loading, error] =
@@ -19,13 +24,20 @@ const Login = () => {
     signInWithEmailAndPassword(email, password);
   };
 
+  const [sendPasswordResetEmail, sending, PassReseterror] =
+    useSendPasswordResetEmail(auth);
+
+  const handleResetPass = async () => {
+    await sendPasswordResetEmail(email);
+    toast("Reset email sent");
+  };
   let from = location.state?.from?.pathname || "/";
 
   if (user) {
     navigate(from, { replace: true });
   }
 
-  if (loading) {
+  if (loading || sending) {
     return <Loading />;
   }
 
@@ -41,6 +53,7 @@ const Login = () => {
               name="email"
               required
               placeholder="Enter email"
+              onChange={(e) => setEmail(e.target.value)}
             />
           </Form.Group>
 
@@ -71,7 +84,20 @@ const Login = () => {
             New here? <Link to="/register">Register Now</Link>
           </small>
         </p>
+        <p>
+          <small>
+            Foget password?{" "}
+            <span
+              style={{ cursor: "pointer" }}
+              onClick={handleResetPass}
+              className="text-danger "
+            >
+              Reset Now!
+            </span>
+          </small>
+        </p>
       </div>
+      <ToastContainer />
     </div>
   );
 };
