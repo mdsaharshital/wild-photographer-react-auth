@@ -1,14 +1,28 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
+import auth from "./../../../firebase.init";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 
 const Login = () => {
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+  const navigate = useNavigate();
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    signInWithEmailAndPassword(email, password);
+  };
+  if (user) {
+    navigate("/");
+  }
   return (
     <div className="my-5">
       <h1 className="text-center">Login now</h1>
       <div className="w-50 mx-auto">
-        <Form>
+        <Form onSubmit={handleLogin}>
           <Form.Group className="my-5" controlId="formBasicEmail">
             <Form.Control
               className="border-top-0 border-end-0"
@@ -31,6 +45,8 @@ const Login = () => {
           <Form.Group className="mb-4" controlId="formBasicCheckbox">
             <Form.Check type="checkbox" label="Agree To terms & condition" />
           </Form.Group>
+          {/* error */}
+          {error && <p className="text-danger">{error?.message}</p>}
           <Button
             className="mx-auto d-block px-5 mt-5 mb-2"
             variant="outline-secondary"
