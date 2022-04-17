@@ -9,6 +9,7 @@ import { useSendPasswordResetEmail } from "react-firebase-hooks/auth";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SocialLogin from "../../shared/SocialLogin/SocialLogin";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -28,8 +29,12 @@ const Login = () => {
     useSendPasswordResetEmail(auth);
 
   const handleResetPass = async () => {
-    await sendPasswordResetEmail(email);
-    toast("Reset email sent");
+    if (email) {
+      await sendPasswordResetEmail(email);
+      toast("Reset email sent");
+    } else {
+      toast("enter your email");
+    }
   };
   let from = location.state?.from?.pathname || "/";
 
@@ -66,13 +71,13 @@ const Login = () => {
               placeholder="Password"
             />
           </Form.Group>
-          <Form.Group className="mb-4" controlId="formBasicCheckbox">
+          <Form.Group className="" controlId="formBasicCheckbox">
             <Form.Check type="checkbox" label="Agree To terms & condition" />
           </Form.Group>
           {/* error */}
           {error && <p className="text-danger">{error?.message}</p>}
           <Button
-            className="mx-auto d-block px-5 mt-5 mb-2"
+            className="mx-auto d-block px-5 my-2"
             variant="outline-secondary"
             type="submit"
           >
@@ -96,6 +101,7 @@ const Login = () => {
             </span>
           </small>
         </p>
+        <SocialLogin />
       </div>
       <ToastContainer />
     </div>

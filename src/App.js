@@ -9,6 +9,7 @@ import Register from "./Pages/SignIn-SignUp/Register/Register";
 import Footer from "./Pages/shared/Footer/Footer";
 import Header from "./Pages/shared/Header/Header";
 import RequireAuth from "./Pages/SignIn-SignUp/RequireAuth/RequireAuth";
+import NotFound from "./Pages/shared/NotFound/NotFound";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/register" element={<Register />}></Route>
         <Route path="/aboutme" element={<AboutMe />}></Route>
         <Route path="/blogs" element={<Blogs />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
       <Footer />
     </div>

@@ -5,6 +5,7 @@ import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import Loading from "../../shared/Loading/Loading";
 import { useUpdateProfile } from "react-firebase-hooks/auth";
+import SocialLogin from "../../shared/SocialLogin/SocialLogin";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -81,6 +82,7 @@ const Register = () => {
               Already Registered? <Link to="/login">Login</Link>
             </small>
           </p>
+          <SocialLogin />
         </div>
       </div>
     </div>

@@ -33,7 +33,7 @@ const LatestWork = () => {
   ];
   return (
     <div className="my-5 lastest-container">
-      <h3 className="text-center title-text">Buy my photography as NFT</h3>
+      <h3 className="text-center title-text">Buy my photographs as NFT</h3>
       <div className="row g-4 mx-auto">
         {services.map((service) => (
           <ServiceItem key={service.id} service={service} />
