@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Login.css";
 import auth from "./../../../firebase.init";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import Loading from "../../shared/Loading/Loading";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -22,6 +23,10 @@ const Login = () => {
 
   if (user) {
     navigate(from, { replace: true });
+  }
+
+  if (loading) {
+    return <Loading />;
   }
 
   return (
