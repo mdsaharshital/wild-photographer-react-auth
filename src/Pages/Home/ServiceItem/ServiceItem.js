@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 const ServiceItem = ({ service }) => {
   const { name, img, price, id, description } = service;
   const navigate = useNavigate();
-  const navigateToServiceDetails = () => {
-    navigate(`/productdetails/${id}`);
+  const navigateToCheckout = () => {
+    navigate(`/checkout/${id}`);
   };
   return (
     <>
@@ -19,7 +19,7 @@ const ServiceItem = ({ service }) => {
               <small>{description}</small>
             </p>
             <button
-              onClick={() => navigateToServiceDetails()}
+              onClick={() => navigateToCheckout()}
               className="btn btn-outline-secondary"
             >
               Buy Now

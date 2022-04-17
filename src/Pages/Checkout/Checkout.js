@@ -1,11 +1,13 @@
 import React from "react";
 import { Form } from "react-bootstrap";
+import { useParams } from "react-router-dom";
 
 const Checkout = () => {
+  const { productid } = useParams();
   return (
     <div className="">
       <div className="w-50 mx-auto my-5">
-        <h1 className="text-center">Checkout</h1>
+        <h1 className="text-center">Checkout product of {productid}</h1>
         <Form>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
             <Form.Label>Email address</Form.Label>

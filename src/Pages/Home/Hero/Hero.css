@@ -3,8 +3,8 @@
     font-size: 70px;
 }
 .heroSection{
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../../images/elephant-main.jpg) ;
-    height: 130vh; 
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../../images/giraffe-2191662_1920.jpg) ;
+    height: 100vh; 
 
     /* Center and scale the image nicely */
     background-position: center;
