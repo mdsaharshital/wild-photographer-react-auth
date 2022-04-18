@@ -24,6 +24,28 @@ const Blogs = () => {
             <li>Cloud Storage</li>
           </ul>
         </div>
+        <div className="border p-3 col-12 col-md-6 col-lg-6 ">
+          <h3>
+            Why are you using firebase? What other options do you have to
+            implement authentication?
+          </h3>
+          <p>
+            <span className="fw-bolder">Answer:</span> I personaly use firebase
+            for hosting and authentication . Because it is easy to hadnle and
+            understand than other services and , i easily can authenticate and
+            host at the same time without doing extra config file that i had to
+            do before with Netlify. other services which are given below:
+          </p>
+          <ul>
+            <li>Auth )</li>
+            <li>passport</li>
+            <li>MongoDb</li>
+            <li>Okta</li>
+            <li>JSonWeb Token</li>
+            <li>Amazin Cognito</li>
+            <li>Keyclock</li>
+          </ul>
+        </div>
         <div className="border p-3 col-12 col-md-6 col-lg-6">
           <h3>Difference between authorization and authentication?</h3>
           <p>
