@@ -9,8 +9,8 @@ const TestimonyCard = ({ testimony }) => {
         <div className="mx-auto all-cards" style={{ width: "320px" }}>
           <img
             src={img}
-            width="60"
-            height="60"
+            width="120"
+            height="120"
             className="card-img-cont rounded-circle mx-auto d-block"
             alt=""
           />

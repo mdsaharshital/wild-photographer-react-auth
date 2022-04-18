@@ -11,19 +11,19 @@ const ProductDetails = () => {
       id: 1,
       img: billGates,
       name: "Bill Gates",
-      desc: "Most awesome photographer i've ever seen. Wishing his success.",
+      desc: "He is a wonderful man and truly a professional in his field. I will treasure them forever. I simply cannot recommend him enough!",
     },
     {
       id: 2,
       img: willSmith,
       name: "Will Smith",
-      desc: "Awesome Photographer with high potntial and great vision",
+      desc: "He is the absolute BEST! I have had the pleasure of working with her twice and would recommend him to anyone. Thank you, thank you, thank you!",
     },
     {
       id: 3,
       img: chrisRock,
       name: "Chris Rock",
-      desc: "He is a will smith of Photography world. I just love his works",
+      desc: "He creates magic. I would never hesitate to recommend him to anyone who wants a true professional to create a customized photography experience",
     },
   ];
   return (
