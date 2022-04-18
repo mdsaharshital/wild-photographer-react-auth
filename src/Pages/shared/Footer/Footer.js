@@ -3,6 +3,8 @@ import "./Footer.css";
 import { BsFacebook, BsInstagram, BsLinkedin } from "react-icons/bs";
 
 const Footer = () => {
+  const today = new Date();
+  const year = today.getFullYear();
   return (
     <footer className="d-flex flex-column justify-content-center align-items-center">
       <h3 className="footer-title ">Sheikh Mujib</h3>
@@ -22,7 +24,7 @@ const Footer = () => {
       </div>
       <p className="mt-5">
         <small className="copyright-text">
-          Copyright © by Md shahar Shital
+          Copyright © {year} by Md shahar Shital
         </small>
       </p>
     </footer>
