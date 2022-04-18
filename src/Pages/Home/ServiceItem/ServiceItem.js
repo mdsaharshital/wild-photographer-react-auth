@@ -11,7 +11,7 @@ const ServiceItem = ({ service }) => {
     <>
       <div className="col-sm-12 col-md-6 col-lg-4">
         <div className="card mx-auto" style={{ width: "320px" }}>
-          <img src={img} className="card-img-top" alt="..." />
+          <img src={img} className="card-img-top card-img-cont" alt="..." />
           <div className="card-footer text-center">
             <h6>{name}</h6>
             <p>Price: ${price}</p>

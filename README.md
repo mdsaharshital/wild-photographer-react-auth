@@ -1,4 +1,4 @@
-## Sheikh Mujib | wild photographer
+## Sheikh Mujib | Wild photographer
 
 Live Site : https://sheikh-mujib-photographer.netlify.app/
 
@@ -14,6 +14,7 @@ This website has multiple functionality . Some are given below:
 - email verification
 - react router for routing
 - private router etc.
+- active route
 
 ### Technologies
 

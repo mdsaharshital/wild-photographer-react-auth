@@ -1,16 +1,17 @@
 import React from "react";
+import "./TestimonyCard.css";
 
 const TestimonyCard = ({ testimony }) => {
   const { img, name, desc } = testimony;
   return (
     <>
-      <div className="col-12 col-md-6 col-lg-4  mx-auto">
+      <div className="col-12 col-md-6 col-lg-4  mx-auto mb-5">
         <div className="mx-auto all-cards" style={{ width: "320px" }}>
           <img
             src={img}
             width="60"
             height="60"
-            className="rounded-circle mx-auto d-block"
+            className="card-img-cont rounded-circle mx-auto d-block"
             alt=""
           />
           <div className="mt-3">
