@@ -4,8 +4,8 @@ Live Site : https://sheikh-mujib-photographer.netlify.app/
 
 ### Description
 
-This a website of a famous photographer named Sheik mujib. He is a wild life photographer and he also sells his photos as NFT.
-This website has multiple functionality . Some are given below:
+This is the website of Sheik Mujib, a well-known photographer. He is a wildlife photographer who also sells his work on the NFT market.
+This website includes a lot of features. Only logged-in users have the ability to purchase his displays. The following technologies were used:
 
 - This is a SPA
 - responsive navbars
@@ -20,9 +20,8 @@ This website has multiple functionality . Some are given below:
 
 Technologies those are used are mentioned below
 
-- bootstrap
-- firebase
 - react
+- firebase
 - react-bootstrap
 - react-dom
 - react-firebase-hooks
