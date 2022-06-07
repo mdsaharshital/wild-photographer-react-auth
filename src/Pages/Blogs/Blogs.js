@@ -37,7 +37,7 @@ const Blogs = () => {
             do before with Netlify. other services which are given below:
           </p>
           <ul>
-            <li>Auth )</li>
+            <li>Auth </li>
             <li>passport</li>
             <li>MongoDb</li>
             <li>Okta</li>
